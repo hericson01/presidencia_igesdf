@@ -28,17 +28,28 @@
 <body>
     <div>
         <div style="display: flex; flex-direction: column; align-items: center;">
-            <p>FILAS ATENDIMENTO UPA 24 HORAS</p>
+            <h1>FILAS ATENDIMENTO UPA 24 HORAS</h1>
             <iframe title="FILAS ATENDIMENTO UPA 24 HORAS" width="800" height="636" src="https://app.powerbi.com/view?r=eyJrIjoiYjk0MTFlNTctNDI5MC00OTI0LTk4YzUtZjgwYTU3NWNmMjE5IiwidCI6ImQ3MTBlOTk3LTI3ZTctNGZhNi05ZGFlLThmMTkwNzRmMmI3ZSJ9" frameborder="0" allowFullScreen="true"></iframe>
         </div>
         <div style="display: flex; flex-direction: column; align-items: center;">
-            <p>FILAS ATENDIMENTO UPA 12 HORAS</p>
+            <h1>FILAS ATENDIMENTO UPA 12 HORAS</h1>
             <iframe title="FILAS ATENDIMENTO UPA 12 HORAS" width="800" height="636" src="https://app.powerbi.com/view?r=eyJrIjoiOGNjMjY1YjAtY2JjMS00OTA4LTg3ZWItODhkNDM5YmFiNzM4IiwidCI6ImQ3MTBlOTk3LTI3ZTctNGZhNi05ZGFlLThmMTkwNzRmMmI3ZSJ9" frameborder="0" allowFullScreen="true"></iframe>
         </div>
         <div style="display: flex; flex-direction: column; align-items: center;">
-            <p>FILAS ATENDIMENTO UPA 6 HORAS</p>
+            <h1>FILAS ATENDIMENTO UPA 6 HORAS</h1>
             <iframe title="FILAS ATENDIMENTO UPA 6 HORAS" width="800" height="636" src="https://app.powerbi.com/view?r=eyJrIjoiOWRkZWFlN2EtODEwZC00ZjAwLThlYWMtOGE2MmEzZjlmYWUwIiwidCI6ImQ3MTBlOTk3LTI3ZTctNGZhNi05ZGFlLThmMTkwNzRmMmI3ZSJ9" frameborder="0" allowFullScreen="true"></iframe>
         </div>
     </div>
+    <script>
+        function atualizarIframes() {
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                // Força o recarregamento do iframe
+                iframe.src = iframe.src;
+            });
+        }
+        // Atualiza a cada 3 minutos (180000 ms)
+        setInterval(atualizarIframes, 180000);
+    </script>
 </body>
 </html>
